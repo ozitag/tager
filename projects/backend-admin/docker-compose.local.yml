@@ -37,8 +37,9 @@ services:
     working_dir: /var/www
     tty: true
     build:
-      context: ./docker/backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+      target: dev
     depends_on:
       - db
     volumes:
