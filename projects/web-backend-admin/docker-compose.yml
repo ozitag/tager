@@ -25,6 +25,23 @@ services:
       PHP_MAX_EXECUTION_TIME: 18000dc
     networks:
       - app-network
+  admin:
+    container_name: ${APP_NAME}-admin
+    restart: always
+    build:
+      context: ./admin
+      dockerfile: ../docker/admin/Dockerfile
+    networks:
+      - app-network
+  admin-auth:
+    container_name: ${APP_NAME}-admin-auth
+    restart: always
+    image: ozitag/tager-admin-auth:latest
+    environment:
+      PAGE_TITLE: ${APP_TITLE} - Login
+      BASE_PATH: /admin/auth
+    networks:
+      - app-network
 networks:
   app-network:
     driver: bridge
