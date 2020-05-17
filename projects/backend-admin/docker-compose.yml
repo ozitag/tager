@@ -35,7 +35,7 @@ services:
     tty: true
     build:
       context: ./backend
-      dockerfile: docker/backend/Dockerfile
+      dockerfile: ../docker/backend/Dockerfile
     depends_on:
       - db
     environment:
