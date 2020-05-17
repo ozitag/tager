@@ -42,7 +42,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./backend:/var/www/app
+      - ./backend/src:/var/www/app
     environment:
       CONTAINER_ROLE: fpm
       WEB_DOCUMENT_ROOT: /var/www/app/public
