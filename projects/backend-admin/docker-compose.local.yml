@@ -18,8 +18,8 @@ services:
     container_name: ${APP_NAME}-admin
     restart: always
     build:
-      context: .
-      dockerfile: docker/admin/Dockerfile
+      context: ./admin
+      dockerfile: ../docker/admin/Dockerfile
     networks:
       - app-network
   admin-auth:
@@ -34,8 +34,8 @@ services:
     working_dir: /var/www
     tty: true
     build:
-      context: .
-      dockerfile: docker/backend/Dockerfile
+      context: ./backend
+      dockerfile: ../docker/backend/Dockerfile
     depends_on:
       - db
     volumes:

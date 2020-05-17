@@ -1,3 +1,3 @@
 git clone git@github.com:ozitag/tager-backend.git backend
 rm -rf backend/.git
-mv backend/docker docker/backend
+cp -r backend/docker docker/backend
