@@ -8,17 +8,11 @@ How to use:
 
 **Step 3** - Create initialization script:
 
-_For web use:_
-`./init-web.sh`
-
 _For web + backend use:_
 `./init-web-backend.sh`
 
 _For web + backend + admin use:_
 `./init-web-backend-admin.sh`
-
-_For backend use:_
-`./init-backend.sh`
 
 _For backend + admin use:_
 `./init-backend-admin.sh`
