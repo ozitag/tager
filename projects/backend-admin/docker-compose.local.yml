@@ -37,12 +37,12 @@ services:
     working_dir: /var/www
     tty: true
     build:
-      context: ./backend
-      dockerfile: ../docker/backend/Dockerfile
+      context: ./docker/backend
+      dockerfile: Dockerfile
     depends_on:
       - db
     volumes:
-      - ./backend/src:/var/www/app
+      - ./backend:/var/www/app
     environment:
       CONTAINER_ROLE: fpm
       WEB_DOCUMENT_ROOT: /var/www/app/public
@@ -67,7 +67,7 @@ services:
     image: composer:1.9
     command: ["composer", "install", "--ignore-platform-reqs"]
     volumes:
-      - $PWD/backend/src:/app
+      - $PWD/backend:/app
 networks:
   app-network:
     driver: bridge
