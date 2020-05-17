@@ -10,7 +10,7 @@ services:
     ports:
       - ${APP_PORT}:80
     depends_on:
-      - api
+      - backend
     working_dir: /var/www
     networks:
       - app-network
@@ -28,18 +28,18 @@ services:
     image: ozitag/tvixer-admin-auth
     networks:
       - app-network
-  api:
-    container_name: ${APP_NAME}-api
+  backend:
+    container_name: ${APP_NAME}-backend
     restart: always
     working_dir: /var/www
     tty: true
     build:
       context: .
-      dockerfile: docker/api/Dockerfile
+      dockerfile: docker/backend/Dockerfile
     depends_on:
       - db
     volumes:
-      - ./api:/var/www/app
+      - ./backend:/var/www/app
     environment:
       CONTAINER_ROLE: fpm
       WEB_DOCUMENT_ROOT: /var/www/app/public
