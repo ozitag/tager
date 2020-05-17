@@ -7,3 +7,5 @@ cp .env.example .env
 ./scripts/cleanup.sh
 
 docker-compose -f docker-compose.local.yml --project-name tager up --build --force-recreate -d
+
+open http://localhost:8000
