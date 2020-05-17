@@ -1,9 +1,9 @@
 How to use:
 
 **Step 1** - Create a folder with your project:
-`mkdir project && cd progect`
+`mkdir project && cd project`
 
-**Step 2** - Clone Tager repo:
+**Step 2** - Clone Tager repo to your project's folder:
 `git clone git@github.com:ozitag/tager.git .`
 
 **Step 3** - Create initialization script:
