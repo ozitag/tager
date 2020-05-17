@@ -63,6 +63,7 @@ services:
     networks:
       - app-network
   composer:
+    container_name: ${APP_NAME}-composer
     image: composer:1.9
     command: ["composer", "install", "--ignore-platform-reqs"]
     volumes:
