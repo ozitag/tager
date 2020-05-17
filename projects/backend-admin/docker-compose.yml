@@ -25,7 +25,7 @@ services:
   admin-auth:
     container_name: ${APP_NAME}-admin-auth
     restart: always
-    image: ozitag/tvixer-admin-auth
+    image: ozitag/tager-admin-auth:latest
     environment:
       PAGE_TITLE: ${APP_TITLE} - Login
       BASE_PATH: /admin/auth
