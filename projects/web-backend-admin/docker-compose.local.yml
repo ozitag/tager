@@ -33,7 +33,9 @@ services:
   admin-auth:
     container_name: ${APP_NAME}-admin-auth
     restart: always
-    image: ozitag/tager-admin-auth:latest
+    build:
+      context: .
+      dockerfile: ./docker/admin-auth/Dockerfile
     environment:
       PAGE_TITLE: ${APP_TITLE} - Login - Local Version
       BASE_PATH: /admin/auth
