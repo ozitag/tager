@@ -62,12 +62,6 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
     networks:
       - app-network
-  composer:
-    container_name: ${APP_NAME}-composer
-    image: composer:1.9
-    command: ["composer", "install", "--ignore-platform-reqs"]
-    volumes:
-      - $PWD/backend:/app
 networks:
   app-network:
     driver: bridge
