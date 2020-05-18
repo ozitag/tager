@@ -36,8 +36,9 @@ services:
   admin-auth:
     container_name: ${APP_NAME}-admin-auth
     restart: always
-      context: .
-      dockerfile: ./docker/admin-auth/Dockerfile
+    build:
+      context: ./docker/admin-auth
+      dockerfile: Dockerfile
     environment:
       PAGE_TITLE: ${APP_TITLE} - Login
       BASE_PATH: /admin/auth
