@@ -7,3 +7,7 @@ cp assets/favicon/* admin/public/favicon
 cp assets/favicon/favicon.ico admin/public/favicon.ico
 cp assets/logo.svg admin/public/logo.svg
 cp assets/logo.png admin/public/logo.png
+
+sed -i -e 's/COPY \.\//COPY \.\/admin\//g' docker/backend/Dockerfile
+sed -i -e 's/COPY \.\/docker/COPY \.\/admin\/COPY \.\/docker\/admin/g' docker/backend/Dockerfile
+rm docker/backend/Dockerfile-e
