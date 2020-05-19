@@ -6,7 +6,12 @@ How to use:
 **Step 2** - Clone Tager repo to your project's folder:
 `git clone git@github.com:ozitag/tager.git .`
 
-**Step 3** - Create initialization script:
+**Step 3** - Prepare brand assets (Logo and Favicon):
+
+- Put logo.svg or logo.png to assets folder
+- Generate your favicon package on https://realfavicongenerator.net/, put result files on assets/favicon folder
+
+**Step 4** - Run initialization script:
 
 _For web + backend use:_
 `./init-web-backend.sh`
