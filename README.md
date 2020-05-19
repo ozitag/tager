@@ -22,8 +22,8 @@ _For web + backend + admin use:_
 _For backend + admin use:_
 `./init-backend-admin.sh`
 
-**Step 4** - Add origin of your repository
+**Step 5** - Add origin of your repository
 `git remote add origin {REPO_URL}`
 
-**Step 5** - Do initial push
+**Step 6** - Do initial push
 `git push origin master`
