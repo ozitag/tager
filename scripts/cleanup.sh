@@ -1,5 +1,6 @@
 rm -rf projects/
 rm -rf scripts/
+rm -rf assets/
 rm -rf ./*.sh
 rm -rf .git
 rm -rf README.md
