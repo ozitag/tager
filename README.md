@@ -8,7 +8,7 @@ How to use:
 
 **Step 3** - Prepare brand assets (Logo and Favicon):
 
-- Put logo.svg or logo.png to assets folder
+- Put logo.svg or logo.png(150x150) with logo@2x.png (300x300) to assets folder
 - Generate your favicon package on https://realfavicongenerator.net/, put result files on assets/favicon folder
 
 **Step 4** - Run initialization script:
