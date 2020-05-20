@@ -37,7 +37,7 @@ services:
       context: ./docker/admin-auth
       dockerfile: Dockerfile
     environment:
-      PAGE_TITLE: ${APP_TITLE} - Login - Local Version
+      PAGE_TITLE: ${APP_TITLE} - Login - Dev
       BASE_PATH: /admin/auth
     networks:
       - app-network
