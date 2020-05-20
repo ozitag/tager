@@ -18,8 +18,8 @@ services:
     container_name: ${APP_NAME}-admin
     restart: always
     build:
-      context: ./admin
-      dockerfile: ../docker/admin/Dockerfile
+      context: ./
+      dockerfile: ./docker/admin/Dockerfile
     networks:
       - app-network
   admin-auth:
