@@ -1,4 +1,14 @@
 const fs = require('fs');
+const path = require('path');
+
+const ensureDirectoryExistence = filePath => {
+    var dirname = path.dirname(filePath);
+    if (fs.existsSync(dirname)) {
+        return true;
+    }
+    ensureDirectoryExistence(dirname);
+    fs.mkdirSync(dirname);
+}
 
 const throwError = error => {
     console.error('Error: ' + error);
@@ -25,4 +35,5 @@ if (!sourceConfig.admin) {
 }
 
 const destConfig = __dirname + '/' + process.argv[3];
+ensureDirectoryExistence(destConfig);
 fs.writeFileSync(destConfig, preparePrettyJSON(sourceConfig.admin));
