@@ -53,7 +53,7 @@ if (!sourceConfig.admin) {
 
 const adminConfig = sourceConfig.admin;
 
-const destConfig = projectRoot + '/admin/src/config.json';
+const destConfig = projectRoot + '/admin/src/config/config.json';
 ensureDirectoryExistence(destConfig);
 fs.writeFileSync(destConfig, preparePrettyJSON(adminConfig));
 
