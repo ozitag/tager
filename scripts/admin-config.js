@@ -37,9 +37,8 @@ if (process.argv.length < 3) {
     throwError('Project root is not set');
 }
 
-const projectRoot = __dirname + '/' + process.argv[2];
-
-const sourceConfigFile = projectRoot + '/config.json';
+const sourceConfigFile = __dirname + '/' + process.argv[2];
+const projectRoot = __dirname + '/' + process.argv[3];
 
 if (!fs.existsSync(sourceConfigFile)) {
     throwError('Source config not found');

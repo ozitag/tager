@@ -3,7 +3,7 @@ rm -rf admin/.git
 mv admin/docker docker/admin
 cp -R assets docker/admin-auth/assets
 
-node ./scripts/admin-config.js ..
+node ./scripts/admin-config.js ../config.json ..
 
 cp -R assets/favicon admin/public/favicon
 cp assets/favicon/favicon.ico admin/public/favicon.ico
