@@ -31,6 +31,9 @@ services:
     environment:
       PAGE_TITLE: ${APP_TITLE} - Login
       BASE_PATH: /admin/auth
+      IS_LOGO_PNG: {{CONFIG_IS_LOGO_PNG}}
+      LANGUAGE: "{{CONFIG_LANGUAGE}}"
+      BRAND_COLOR: "{{CONFIG_BRAND_COLOR}}"
     networks:
       - app-network
   backend:
