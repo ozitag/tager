@@ -18,7 +18,8 @@ const processDockerComposeFile = (filePath, config) => {
 
     let fileRaw = fs.readFileSync(filePath, 'utf-8').toString();
     Object.keys(config).forEach(key => {
-        fileRaw = fileRaw.replace('{{CONFIG_' + key + '}}', config[key]);
+        const value = typeof config[key] === 'boolean' ? (config[key] ? 1 : 0) : config[key];
+        fileRaw = fileRaw.replace('{{CONFIG_' + key + '}}', value);
     });
     fs.writeFileSync(filePath, fileRaw);
 };
