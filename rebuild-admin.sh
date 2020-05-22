@@ -7,7 +7,7 @@ rm -rf admin/.git
 mv admin/docker docker/admin
 cp -R .tager/assets docker/admin-auth/assets
 
-node ./.tager/scripts/admin-config.js ../.tager/config.json ../..
+node ./.tager/scripts/admin-config.js ../config.json ../..
 
 cp -R .tager/assets/favicon admin/public/favicon
 cp .tager/assets/favicon/favicon.ico admin/public/favicon.ico
