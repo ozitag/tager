@@ -1,0 +1,12 @@
+{
+  "web": {
+  },
+  "admin": {
+    "APP_NAME": "Tager",
+    "TITLE_TEMPLATE": "Tager Admin - {{title}}",
+    "IS_LOGO_PNG": true,
+    "LANGUAGE": "RU"
+  },
+  "backend": {
+  }
+}
