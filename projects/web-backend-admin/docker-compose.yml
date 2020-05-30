@@ -19,7 +19,7 @@ services:
     environment:
       CONTAINER_ROLE: fpm
       WEB_DOCUMENT_ROOT: /var/www/app/public
-      PHP_MEMORY_LIMIT: 64M
+      PHP_MEMORY_LIMIT: 1024M
       PHP_UPLOAD_MAX_FILESIZE: 64M
       PHP_POST_MAX_SIZE: 64M
       PHP_MAX_EXECUTION_TIME: 18000dc
