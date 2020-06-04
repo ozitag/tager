@@ -45,6 +45,8 @@ services:
       context: .
       dockerfile: ./docker/backend/Dockerfile
       target: production
+    depends_on:
+      - redis
     ports:
       - ${APP_PORT}:80
     volumes:

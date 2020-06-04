@@ -35,6 +35,7 @@ services:
       target: dev
     depends_on:
       - db
+      - redis
     volumes:
       - ./backend:/var/www/app
     environment:
@@ -54,6 +55,12 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+    networks:
+      - app-network
+  redis:
+    image: redis
+    container_name: ${APP_NAME}-redis
+    restart: always
     networks:
       - app-network
 networks:

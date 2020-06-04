@@ -12,6 +12,8 @@ services:
       target: production
     ports:
       - ${APP_PORT}:80
+    depends_on:
+      - redis
     volumes:
       - ./backend/storage:/var/www/app/storage
     extra_hosts:
