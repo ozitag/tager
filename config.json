@@ -1,6 +1,4 @@
 {
-  "web": {
-  },
   "admin-auth": {
     "APP_TITLE": "OZiTAG - Login",
     "LOGO_EXT": "svg",
@@ -13,18 +11,20 @@
     "LANGUAGE": "EN",
     "BRAND": {
       "small": {
-        "logo-ext": "svg",
-        "name": "OZi",
-        "name-color": "#DD6900"
+        "logo": "logo-small.svg",
+        "label": "OZi",
+        "label-color": "#DD6900"
       },
       "large": {
-        "logo-ext": "svg",
-        "name": "OZiTAG",
-        "name-color": "#DD6900"
+        "logo": "logo.svg",
+        "label": "OZiTAG",
+        "label-color": "#DD6900"
       }
     },
-    "IS_SPLASH_SCREEN_ENABLED": true
-  },
-  "backend": {
+    "SPLASH_SCREEN": {
+      "enabled": true,
+      "logo": "logo.svg",
+      "background": "#1e1e1e"
+    }
   }
 }
