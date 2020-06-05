@@ -1,6 +1,11 @@
 {
   "web": {
   },
+  "admin-auth": {
+    "APP_TITLE": "OZiTAG - Login",
+    "LOGO_EXT": "svg",
+    "BRAND_COLOR": "#DD6900"
+  },
   "admin": {
     "APP_NAME": "OZiTAG_ADMIN",
     "TITLE_TEMPLATE": "OZiTAG Admin - {{title}}",
@@ -17,7 +22,7 @@
         "name-color": "#DD6900"
       }
     },
-    "IS_SPLASH_SCREEN_ENABLED": true
+    "IS_SPLASH_SCREEN_ENABLED": true,
   },
   "backend": {
   }

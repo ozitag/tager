@@ -11,6 +11,8 @@ const ensureDirectoryExistence = filePath => {
 }
 
 const processDockerComposeFile = (filePath, config) => {
+    config.IS_LOGO_PNG = config.LOGO_EXT && config.LOGO_EXT.toUpperCase() === 'PNG';
+
     if (fs.existsSync(filePath) === false) {
         console.log('Docker file `' + filePath + '` is not found');
         return;
@@ -52,9 +54,19 @@ if (!sourceConfig.admin) {
 
 const adminConfig = sourceConfig.admin;
 
+const adminAuthConfig = 'admin-auth' in sourceConfig ? sourceConfig['admin-auth'] : {
+    "APP_NAME": "OZiTAG - Login",
+    "LOGO_EXT": "svg",
+    "BRAND_COLOR": "#DD6900"
+};
+
+processDockerComposeFile(projectRoot + '/docker-compose.dev.yml', adminAuthConfig);
+processDockerComposeFile(projectRoot + '/docker-compose.yml', adminAuthConfig);
+
+if ('AUTH_LOGO_EXT' in adminConfig) {
+    delete adminConfig.AUTH_LOGO_EXT;
+}
+
 const destConfig = projectRoot + '/admin/src/config/config.json';
 ensureDirectoryExistence(destConfig);
 fs.writeFileSync(destConfig, preparePrettyJSON(adminConfig));
-
-processDockerComposeFile(projectRoot + '/docker-compose.dev.yml', adminConfig);
-processDockerComposeFile(projectRoot + '/docker-compose.yml', adminConfig);
