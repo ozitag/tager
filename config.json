@@ -22,7 +22,7 @@
         "name-color": "#DD6900"
       }
     },
-    "IS_SPLASH_SCREEN_ENABLED": true,
+    "IS_SPLASH_SCREEN_ENABLED": true
   },
   "backend": {
   }
