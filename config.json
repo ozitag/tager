@@ -4,7 +4,8 @@
   "admin-auth": {
     "APP_TITLE": "OZiTAG - Login",
     "LOGO_EXT": "svg",
-    "BRAND_COLOR": "#DD6900"
+    "BRAND_COLOR": "#DD6900",
+    "LANGUAGE": "EN"
   },
   "admin": {
     "APP_NAME": "OZiTAG_ADMIN",
