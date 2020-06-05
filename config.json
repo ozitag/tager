@@ -2,11 +2,22 @@
   "web": {
   },
   "admin": {
-    "APP_NAME": "Tager",
-    "TITLE_TEMPLATE": "Tager Admin - {{title}}",
-    "IS_LOGO_PNG": true,
+    "APP_NAME": "OZiTAG_ADMIN",
+    "TITLE_TEMPLATE": "OZiTAG Admin - {{title}}",
     "LANGUAGE": "EN",
-    "BRAND_COLOR": "#DD6900"
+    "BRAND": {
+      "small": {
+        "logo-ext": "svg",
+        "name": "OZi",
+        "name-color": "#DD6900"
+      },
+      "large": {
+        "logo-ext": "svg",
+        "name": "OZiTAG",
+        "name-color": "#DD6900"
+      }
+    },
+    "IS_SPLASH_SCREEN_ENABLED": true
   },
   "backend": {
   }
