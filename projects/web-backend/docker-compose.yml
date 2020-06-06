@@ -33,6 +33,14 @@ services:
     restart: always
     networks:
       - app-network
+  web:
+    container_name: ${APP_NAME}-web
+    restart: always
+    build:
+      context: ./web
+      dockerfile: ../docker/web/Dockerfile
+    networks:
+      - app-network
 networks:
   app-network:
     driver: bridge

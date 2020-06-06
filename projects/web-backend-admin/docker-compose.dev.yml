@@ -75,8 +75,8 @@ services:
     ports:
       - ${MYSQL_EXTERNAL_PORT}:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tager
     networks:
       - app-network
   redis:

@@ -1,4 +1,4 @@
-How to use:
+###### Project initialization:
 
 **Step 1** - Create a folder with your project:
 `mkdir project && cd project`
@@ -28,3 +28,35 @@ _For backend + admin use:_
 
 **Step 6** - Do initial push
 `git push origin master`
+
+
+###### Server installation
+
+**Step 1** - Create .env file
+```
+APP_NAME=tager   # Prefix for docker container names
+APP_PORT=3000    # External application port 
+
+MYSQL_EXTERNAL_PORT=33066  # External MySQL Port
+```
+
+**Step 2** - Run Docker Compose
+```
+docker-compose -f docker-compose.dev.yml --project-name presetbox up --build --force-recreate -d
+```
+
+**Step 3** - Configure Nginx
+
+```
+server {
+    server_name domain.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;   # Change 3000 to your external application port
+        proxy_http_version 1.1;
+        proxy_set_header Host $http_host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+```
