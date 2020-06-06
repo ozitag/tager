@@ -5,6 +5,11 @@ cp -R assets docker/admin-auth/assets
 
 node ./scripts/admin-config.js ../config.json ..
 
+rm -R admin/public/favicon
+rm admin/public/logo.svg
+rm admin/public/logo-small.svg
+rm admin/public/logo-white.svg
+
 cp -R assets/* admin/public
 cp assets/favicon/favicon.ico admin/public/favicon.ico
 
