@@ -8,5 +8,5 @@ mkdir docker/web
 cp web/Dockerfile docker/web/Dockerfile
 cp web/.env.example web/.env
 
-cp -R .tager/assets/favicon web/public
+cp -R .tager/assets/* web/public
 cp .tager/assets/favicon/favicon.ico web/public/favicon.ico
