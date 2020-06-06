@@ -41,7 +41,7 @@ services:
     environment:
       PAGE_TITLE: ${APP_TITLE} - Dev
       BASE_PATH: /admin/auth
-      IS_LOGO_PNG: {{CONFIG_IS_LOGO_PNG}}
+      LOGO: "{{CONFIG_LOGO}}"
       LANGUAGE: "{{CONFIG_LANGUAGE}}"
       BRAND_COLOR: "{{CONFIG_BRAND_COLOR}}"
     networks:

@@ -11,8 +11,6 @@ const ensureDirectoryExistence = filePath => {
 }
 
 const processDockerComposeFile = (filePath, config) => {
-    config.IS_LOGO_PNG = config.LOGO_EXT && config.LOGO_EXT.toUpperCase() === 'PNG';
-
     if (fs.existsSync(filePath) === false) {
         console.log('Docker file `' + filePath + '` is not found');
         return;
@@ -56,7 +54,7 @@ const adminConfig = sourceConfig.admin;
 
 const adminAuthConfig = 'admin-auth' in sourceConfig ? sourceConfig['admin-auth'] : {
     "APP_NAME": "OZiTAG - Login",
-    "LOGO_EXT": "svg",
+    "LOGO": "logo.svg",
     "BRAND_COLOR": "#DD6900"
 };
 
