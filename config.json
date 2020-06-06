@@ -23,7 +23,7 @@
     },
     "SPLASH_SCREEN": {
       "enabled": true,
-      "logo": "logo.svg",
+      "logo": "logo-white.svg",
       "background": "#1e1e1e"
     }
   }
