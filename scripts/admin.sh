@@ -5,10 +5,8 @@ cp -R assets docker/admin-auth/assets
 
 node ./scripts/admin-config.js ../config.json ..
 
-cp -R assets/favicon admin/public
+cp -R assets/* admin/public
 cp assets/favicon/favicon.ico admin/public/favicon.ico
-cp assets/logo.svg admin/public/logo.svg
-cp assets/logo.png admin/public/logo.png
 
 sed -i -e 's/COPY \.\/p/COPY \.\/admin\/p/g' docker/admin/Dockerfile
 sed -i -e 's/COPY \.\/y/COPY \.\/admin\/y/g' docker/admin/Dockerfile
