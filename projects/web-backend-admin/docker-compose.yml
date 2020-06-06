@@ -27,6 +27,12 @@ services:
       PHP_MAX_EXECUTION_TIME: 18000dc
     networks:
       - app-network
+  redis:
+    image: redis
+    container_name: ${APP_NAME}-redis
+    restart: always
+    networks:
+      - app-network
   admin:
     container_name: ${APP_NAME}-admin
     restart: always
