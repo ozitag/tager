@@ -4,5 +4,5 @@ mkdir docker/web
 cp web/Dockerfile docker/web/Dockerfile
 cp web/.env.example web/.env
 
-cp -R assets/favicon web/public/favicon
+cp -R assets/* web/public
 cp assets/favicon/favicon.ico web/public/favicon.ico
