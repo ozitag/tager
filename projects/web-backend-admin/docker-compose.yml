@@ -48,8 +48,8 @@ services:
       context: ./docker/admin-auth
       dockerfile: Dockerfile
     environment:
-      PAGE_TITLE: ${APP_TITLE} - Login
       BASE_PATH: /admin/auth
+      PAGE_TITLE: "{{CONFIG_TITLE}}"
       LOGO: "{{CONFIG_LOGO}}"
       LANGUAGE: "{{CONFIG_LANGUAGE}}"
       BRAND_COLOR: "{{CONFIG_BRAND_COLOR}}"
