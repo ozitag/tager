@@ -21,4 +21,6 @@ sed -i -e 's/COPY \.\/docker/COPY \.\/docker\/admin/g' docker/admin/Dockerfile
 rm docker/admin/Dockerfile-e
 
 sed -i -e 's/\/favicon/\/admin\/favicon/g' admin/public/favicon/browserconfig.xml
+rm admin/public/favicon/browserconfig.xml-e
 sed -i -e 's/\/favicon/\/admin\/favicon/g' admin/public/favicon/site.webmanifest
+rm admin/public/favicon/site.webmanifest-e
