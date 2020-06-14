@@ -27,6 +27,8 @@ services:
       target: production
     depends_on:
       - redis
+    volumes:
+      - ./backend/storage:/var/www/app/storage
     extra_hosts:
       - "dockerhost:${LOCAL_IP}"
     environment:

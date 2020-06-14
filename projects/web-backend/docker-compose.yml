@@ -25,6 +25,8 @@ services:
       context: .
       dockerfile: ./docker/backend/Dockerfile
       target: production
+    volumes:
+      - ./backend/storage:/var/www/app/storage
     depends_on:
       - redis
     extra_hosts:

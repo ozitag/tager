@@ -21,6 +21,8 @@ services:
     restart: always
     working_dir: /var/www
     tty: true
+    volumes:
+      - ./backend/storage:/var/www/app/storage
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
