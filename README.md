@@ -6,13 +6,16 @@
 **Step 2** - Clone Tager repo to your project's folder:
 `git clone git@github.com:ozitag/tager.git .`
 
-**Step 3** - Prepare brand assets (Logo and Favicon):
+**Step 3* - Prepare brand assets (Logo and Favicon) project:
 
 - Put your logo file (300х300) to assets folder (optional, because you can set absolute URL of your logo)
 - Generate your favicon package on https://realfavicongenerator.net/, put result files on assets/favicon folder
 - Set config options on config.json
 
 **Step 4** - Run initialization script:
+
+_For web use:_
+`./init-web.sh`
 
 _For web + backend use:_
 `./init-web-backend.sh`
@@ -37,7 +40,7 @@ _For backend + admin use:_
 APP_NAME=tager   # Prefix for docker container names
 APP_PORT=3000    # External application port 
 
-MYSQL_EXTERNAL_PORT=33066  # External MySQL Port
+MYSQL_EXTERNAL_PORT=33066  # External MySQL Port (for projects with backend)
 ```
 
 **Step 2** - Run Docker Compose
