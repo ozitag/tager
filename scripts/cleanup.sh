@@ -7,6 +7,9 @@ rm -rf scripts
 rm -rf projects
 rm -rf ./init*.sh
 rm -rf .git
+
+mv project-scripts scripts
+
 git init
 git add -A .
 git commit -m 'init commit'

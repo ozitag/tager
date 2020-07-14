@@ -1,0 +1,26 @@
+image: alpine:3.7
+
+before_script:
+  - apk update && apk add openssh-client bash
+
+deploy-develop:
+  stage: deploy
+  script:
+    - eval $(ssh-agent -s)
+    - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    - echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+    - ssh user@XXX.XX.XXX.XXX < /builds/ozitag/path/to/project/scripts/deploy-develop.sh
+  only:
+    - develop
+
+deploy-production:
+  stage: deploy
+  script:
+    - eval $(ssh-agent -s)
+    - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    - echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+    - ssh user@XXX.XX.XXX.XXX < /builds/ozitag/path/to/project/scripts/deploy-master.sh
+  only:
+    - master
