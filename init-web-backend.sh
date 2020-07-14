@@ -1,5 +1,7 @@
 mv projects/web-backend/* .
 mv projects/web-backend/.env.example .env.example
+mv projects/web-backend/.gitlab-ci.yml .gitlab-ci.yml
+
 cp .env.example .env
 
 ./scripts/web.sh
