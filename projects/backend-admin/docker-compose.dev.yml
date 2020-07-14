@@ -22,8 +22,6 @@ services:
     build:
       context: ./
       dockerfile: ./docker/admin/Dockerfile
-      args:
-        APP_ENV: ${APP_ENV:?err}
     networks:
       - app-network
   admin-auth:
