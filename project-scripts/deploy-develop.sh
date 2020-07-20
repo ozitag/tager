@@ -1,6 +1,6 @@
 cd /srv/PROJECT_NAME
 
-sudo chown www-data:www-data -R .
+#sudo chown www-data:www-data -R .
 
 sudo -u www-data git fetch --all
 sudo -u www-data git reset --hard origin/develop

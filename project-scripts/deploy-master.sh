@@ -1,6 +1,6 @@
 cd /srv/PROJECT_NAME
 
-chown ozitag:ozitag -R .
+#chown ozitag:ozitag -R .
 
 git fetch --all
 git reset --hard origin/master
