@@ -50,6 +50,7 @@ services:
   db:
     container_name: ${APP_NAME}-db
     image: mysql:5.7
+    restart: always
     ports:
       - ${MYSQL_EXTERNAL_PORT}:3306
     environment:
