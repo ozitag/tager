@@ -15,7 +15,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ./backend/storage/app/public/uploads:/var/www/uploads
+      - ./uploads:/var/www/uploads
   backend:
     container_name: ${APP_NAME}-backend
     restart: always
@@ -26,6 +26,7 @@ services:
       dockerfile: ./docker/backend/Dockerfile
       target: production
     volumes:
+      - ./uploads:/var/www/app/storage/app/public/uploads
       - ./backend/storage:/var/www/app/storage
     depends_on:
       - redis

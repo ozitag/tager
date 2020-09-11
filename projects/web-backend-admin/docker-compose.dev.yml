@@ -15,7 +15,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ./backend/storage/app/public/uploads:/var/www/uploads
+      - ./uploads:/var/www/uploads
   web:
     container_name: ${APP_NAME}-web
     restart: always

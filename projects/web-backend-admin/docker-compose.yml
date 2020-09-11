@@ -15,13 +15,14 @@ services:
     networks:
       - app-network
     volumes:
-      - ./backend/storage/app/public/uploads:/var/www/uploads
+      - ./uploads:/var/www/uploads
   backend:
     container_name: ${APP_NAME}-backend
     restart: always
     working_dir: /var/www
     tty: true
     volumes:
+      - ./uploads:/var/www/app/storage/app/public/uploads
       - ./backend/storage:/var/www/app/storage
     build:
       context: .

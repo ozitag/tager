@@ -4,6 +4,7 @@ cp -R backend/docker docker/backend
 rm -rf backend
 mv _backend backend
 cp backend/.env.example backend/.env
+cp backend/.dockerignore backend/.dockerignore
 
 cp assets/favicon/favicon.ico backend/public/favicon.ico
 

@@ -1,0 +1,16 @@
+.git
+.idea
+
+backend/storage/app/public/uploads
+backend/storage/logs/*
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/testing/*
+backend/storage/framework/views/*
+backend/storage/*.cache
+*.log
+.gitignore
+.gitlab-ci.yml
+.editorconfig
+
+uploads/**
