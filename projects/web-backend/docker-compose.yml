@@ -39,6 +39,7 @@ services:
       PHP_UPLOAD_MAX_FILESIZE: 64M
       PHP_POST_MAX_SIZE: 64M
       PHP_MAX_EXECUTION_TIME: 18000dc
+      SERVICE_NGINX_CLIENT_MAX_BODY_SIZE: 100M
     networks:
       - app-network
   redis:
