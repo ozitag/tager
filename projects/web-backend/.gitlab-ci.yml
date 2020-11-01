@@ -7,7 +7,7 @@ deploy-develop:
   stage: deploy
   script:
     - eval $(ssh-agent -s)
-    - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY_TAGER_DEV")'
     - echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
     - ssh user@XXX.XX.XXX.XXX < /builds/ozitag/path/to/project/scripts/deploy-develop.sh
