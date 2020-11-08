@@ -51,6 +51,7 @@ services:
       - db
       - redis
     volumes:
+      - ./uploads:/var/www/app/storage/app/public/uploads
       - ./backend:/var/www/app
     environment:
       CONTAINER_ROLE: fpm
