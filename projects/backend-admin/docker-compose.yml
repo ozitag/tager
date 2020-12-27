@@ -62,6 +62,8 @@ services:
       LOGO: "{{CONFIG_LOGO}}"
       LANGUAGE: "{{CONFIG_LANGUAGE}}"
       BRAND_COLOR: "{{CONFIG_BRAND_COLOR}}"
+      #RECAPTCHA_SITE_KEY: '...'
+      #RECAPTCHA_VERSION: '2' | '2-invisible' | '3'
     networks:
       - app-network
   db:
