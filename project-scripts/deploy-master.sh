@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 cd /srv/PROJECT_NAME
 
 #chown ozitag:ozitag -R .
