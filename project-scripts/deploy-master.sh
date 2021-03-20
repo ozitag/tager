@@ -14,7 +14,7 @@ sudo cp web/env/.env.production web/.env
 sudo cp admin/env/.env.production admin/.env
 sudo cp backend/.env.production backend/.env
 
-COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.yml --project-name PROJECT_NAME build
+COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.yml --project-name PROJECT_NAME build --pull
 
 touch .maintenance
 COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.yml --project-name PROJECT_NAME up -d --force-recreate
