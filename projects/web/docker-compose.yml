@@ -17,7 +17,7 @@ services:
     restart: always
     build:
       context: ./web
-      dockerfile: ../docker/web/Dockerfile
+      dockerfile: ./docker/web/Dockerfile
     networks:
       - app-network
 networks:
