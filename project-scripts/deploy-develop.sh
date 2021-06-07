@@ -39,4 +39,4 @@ sudo cp scripts/nginx-develop.conf /etc/nginx/sites-available/PROJECT_NAME
 COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.dev.yml --project-name PROJECT_NAME build --pull
 touch .maintenance
 COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.dev.yml --project-name PROJECT_NAME up -d --force-recreate
-rm .maintenance
+rm -f .maintenance

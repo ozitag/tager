@@ -18,4 +18,4 @@ COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.yml --project-nam
 
 touch .maintenance
 COMPOSE_HTTP_TIMEOUT=200 sudo docker-compose -f docker-compose.yml --project-name PROJECT_NAME up -d --force-recreate
-rm .maintenance
+rm -f .maintenance
