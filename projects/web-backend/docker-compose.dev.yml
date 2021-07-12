@@ -16,6 +16,7 @@ services:
       - app-network
     volumes:
       - ./uploads:/var/www/uploads
+      - ./backend/storage/app/public/http-cache:/var/www/http-cache
   web:
     container_name: ${APP_NAME}-web
     restart: always
