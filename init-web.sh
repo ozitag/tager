@@ -1,6 +1,7 @@
 mv projects/web/* .
 mv projects/web/.env.example .env.example
 mv projects/web/.gitlab-ci.yml .gitlab-ci.yml
+mv projects/.husky .husky
 
 cp .env.example .env
 

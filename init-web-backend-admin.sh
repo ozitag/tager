@@ -1,6 +1,7 @@
 mv projects/web-backend-admin/* .
 mv projects/web-backend-admin/.env.example .env.example
 mv projects/web-backend-admin/.gitlab-ci.yml .gitlab-ci.yml
+mv projects/.husky .husky
 
 cp .env.example .env
 
