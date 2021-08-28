@@ -24,6 +24,10 @@
       "enabled": true,
       "logo": "logo-white.svg",
       "background": "#1e1e1e"
+    },
+    "COPYRIGHT": {
+      "label": "TAGER",
+      "link": "https://ozitag.com/tager"
     }
   }
 }
