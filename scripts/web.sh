@@ -10,3 +10,7 @@ rm -R web/public/favicon
 
 cp -R assets/* web/public
 cp assets/favicon/favicon.ico web/public/favicon.ico
+
+cd web
+yarn tager:update
+cd ..

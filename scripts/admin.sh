@@ -24,3 +24,7 @@ sed -i -e 's/\/favicon/\/admin\/favicon/g' admin/public/favicon/browserconfig.xm
 rm admin/public/favicon/browserconfig.xml-e
 sed -i -e 's/\/favicon/\/admin\/favicon/g' admin/public/favicon/site.webmanifest
 rm admin/public/favicon/site.webmanifest-e
+
+cd admin
+yarn tager:update
+cd ..
