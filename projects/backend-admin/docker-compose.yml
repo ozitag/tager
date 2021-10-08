@@ -68,16 +68,6 @@ services:
       # GOOGLE_CLIENT_ID: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     networks:
       - app-network
-  db:
-    container_name: ${APP_NAME}-db
-    image: mysql:8
-    ports:
-      - ${MYSQL_EXTERNAL_PORT}:3306
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=tager
-    networks:
-      - app-network
 networks:
   app-network:
     driver: bridge
