@@ -68,6 +68,12 @@ services:
       # GOOGLE_CLIENT_ID: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     networks:
       - app-network
+  redis:
+    image: redis
+    container_name: ${APP_NAME}-redis
+    restart: always
+    networks:
+      - app-network
 networks:
   app-network:
     driver: bridge
