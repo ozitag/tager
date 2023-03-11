@@ -3,15 +3,19 @@ version: "3.4"
 services:
   nginx:
     container_name: ${APP_NAME}-nginx
+    image: nginx:stable-alpine
     restart: always
-    build:
-      context: .
-      dockerfile: docker/nginx/Dockerfile
     ports:
       - ${APP_PORT}:80
-    working_dir: /var/www
+    depends_on:
+      - backend
     networks:
       - app-network
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/errors:/var/www/errors
+      - ./uploads:/var/www/uploads
+      - ./backend/storage/app/public/http-cache:/var/www/http-cache
   web:
     container_name: ${APP_NAME}-web
     restart: always

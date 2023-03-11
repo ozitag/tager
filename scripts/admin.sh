@@ -2,6 +2,7 @@ git clone git@github.com:ozitag/tager-admin.git admin
 rm -rf admin/.git
 mv admin/docker docker/admin
 cp -R assets docker/admin-auth/assets
+rm docker/admin-auth/.gitkeep
 
 node ./scripts/admin-config.js ../config.json ..
 
